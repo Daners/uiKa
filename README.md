@@ -1,4 +1,4 @@
 uiKa
 ====
 
-fast, samrt and easy
+fast, smart and easy
