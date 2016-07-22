@@ -1,0 +1,12 @@
+.card.thumbnail.list-group-item-success.flip-elemt(ng-repeat='card in column.cards',href="#form")
+
+  .btn-group.grup-button-right(role='group')
+    button.grup-menu-colum.btn-xs(type='button' )
+      span.glyphicon.glyphicon-chevron-down(aria-hidden='true', flip-type="trigger" flip-elemt="{$card}")
+    button.grup-menu-colum.btn-xs(type='button', delete-card)
+      span.glyphicon.glyphicon-remove(aria-hidden='true')
+  
+  .caption
+    h4(editable-text='card.tittle', buttons='no',e-style="font-size:large;width: 190px;background: transparent; border-color: transparent; padding: 0") {{card.tittle || 'Ingresa Nombre'}}
+    p(editable-textarea='card.desc', e-style="font-size: 14px;background: transparent; border-color: transparent; padding: 0")
+      | {{card.desc || 'Ingresa descripcion' | limitTo:20 }} {{card.desc.length > 20 ? '...' : ''}}

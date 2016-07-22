@@ -1,0 +1,58 @@
+html(lang='en', ng-app='scrum')
+  head
+    title  Scrum
+    link(rel='stylesheet', type='text/css', href='stylesheets/scrum.css')
+    style.anchorjs.
+    link(href='http://getbootstrap.com/dist/css/bootstrap.min.css', rel='stylesheet')
+    link#bs-theme-stylesheet(href='data:text/css;charset=utf-8,', data-href='http://getbootstrap.com//dist/css/bootstrap-theme.min.css', rel='stylesheet')
+    link(href='http://getbootstrap.com/assets/css/docs.min.css', rel='stylesheet')
+    link(href='stylesheets/dragula.min.css', rel='stylesheet', type='text/css')
+    link(href='stylesheets/xeditable.css', rel='stylesheet')
+    link(href='stylesheets/adaptive-modal.css', rel='stylesheet')
+    link(href='stylesheets/menuslide.css', rel='stylesheet')
+    //if lt IE 9
+      script(src='http://getbootstrap.com/assets/js/ie8-responsive-file-warning.js')
+  body.cbp-spmenu-push    
+    #st-container(ng-controller='dashboardController as dashboard')
+      nav.navbar.navbar-scrum
+        #st-trigger-effects.column
+          button.menu-trigger.btn-lg(type='button',show-menu='click')
+            span.glyphicon.glyphicon-th
+        .container
+          .navbar-header
+          #navbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                .navbar-brand(href='#') {{dashboard.header}}
+          // /.nav-collapse
+      menu-slide
+      .container
+        columnas.row.inline(dragula='"column-bag"', dragula-model='dashboard.kanban.columns')
+        form.container#form(flip-form="invisible")
+          div.form-group
+            label(for="exampleInputEmail1") Email address
+            input.form-control(type="email" ,placeholder="Email")
+          div.form-group
+            label(for="exampleInputPassword1") Password
+            input.form-control(type="password", placeholder="Password")
+          div.form-group
+            label(for="exampleInputFile") File input
+            input( type="file", id="exampleInputFile")
+            p.help-block Example block-level help text here.
+          div.checkbox
+            label
+              input(type="checkbox")
+          button.btn.btn-default( type="submit") Submit
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js')
+  script(type='text/javascript', src='javascripts/angular-dragula.min.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  script(src='http://getbootstrap.com/dist/js/bootstrap.min.js')
+  script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js')
+  script(type='text/javascript', src='javascripts/app.js')
+  script(src='javascripts/classie.js')
+  script(src='javascripts/xeditable.min.js')
+  script(src='javascripts/classie.js')
+  script(src='javascripts/flipElement.js')
+  script(src='javascripts/tareas.js')
+  script(src='javascripts/columnas.js')
+  script(src='javascripts/utils.js')

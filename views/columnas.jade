@@ -1,0 +1,10 @@
+.col-sm-3.inline(ng-repeat='column in dashboard.kanban.columns')
+  .panel-scrum(ng-class="column.color || 'panel-scrum-g'")
+    .panel-heading
+      .btn-group.grup-button-right(role='group')
+        button.grup-menu-colum.btn-xs(type='button')
+          span.glyphicon.glyphicon-chevron-down(aria-hidden='true')
+        button.grup-menu-colum.btn-xs.add-card(type='button',add-card)
+          span.glyphicon.glyphicon-plus(aria-hidden='true')
+      h2.panel-title(editable-text='column.title',e-style=" color: white;font-size:16px;width: 150px;background: transparent; border-color: transparent; padding: 0", buttons='no') {{column.title || 'Ingresa nombre'}}              
+    tareas.panel-body(dragula='"card-bag"', dragula-scope='$parent', dragula-model='column.cards',style="display: block")
