@@ -35,16 +35,6 @@ var dashboard = {
             tittle: "Correccion",
             desc: "resolver #03 defetos"
         }]
-    },{
-        title: "Task",
-        color: "panel-scrum-g",
-        cards: [{
-            tittle: "Aereos",
-            desc: "terminar aereos"
-        }, {
-            tittle: "Correccion",
-            desc: "resolver #03 defetos"
-        }]
     }, {
         title: "In progress",
         color: "panel-scrum-blue",
