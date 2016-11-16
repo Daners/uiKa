@@ -227,7 +227,7 @@
         $("body").append("<div class='am-overlay overlay active'><div class='am-close-backdrop'></div><div class='am-modal " + className + "'><div class='am-wrapper'></div></div></div>");
         el.clone().removeData("toggle").removeData("title").addClass("am-front").css(styles).appendTo(".am-modal .am-wrapper");
 
-        $(".am-modal .am-wrapper").append("<div class='am-back'><div class='am-modal-content " + remote + "'>" + content + "</div></div>")
+        $(".am-modal .am-wrapper").append("<div class='am-back thumbnail'><div class='am-modal-content " + remote + "'>" + content + "</div></div>")
 
         $(".am-modal").css({
             width: w,
@@ -624,6 +624,11 @@
             step: "",
             selector: $(".am-modal")
         }, {
+            time: 500,
+            remove: "am-modal-open",
+            step: "",
+            selector: $("body")
+        }, {
             time: 0,
             step: "",
             selector: $(".am-modal"),
@@ -632,11 +637,6 @@
                     visibility: "visible"
                 })
             }
-        }, {
-            time: 500,
-            remove: "am-modal-open",
-            step: "",
-            selector: $("body")
         }, {
             time: 500,
             step: "",
