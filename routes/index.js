@@ -61,6 +61,10 @@ var dashboard = {
         }, {
             tittle: "Reenvio RF",
             desc: "Observar como se reenvia"
+        },
+        {
+            tittle: "CLCK",
+            desc: "TDD"
         }]
     }]
 
