@@ -3,8 +3,10 @@ html(lang='en', ng-app='scrum')
     title  Scrum
     link(rel='stylesheet', type='text/css', href='stylesheets/scrum.css')
     style.anchorjs.
-    link(href='https://getbootstrap.com/dist/css/bootstrap.min.css', rel='stylesheet')
-    link#bs-theme-stylesheet(href='data:text/css;charset=utf-8,', data-href='https://getbootstrap.com//dist/css/bootstrap-theme.min.css', rel='stylesheet')
+    
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+    link#bs-theme-stylesheet(href='data:text/css;charset=utf-8,', data-href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', rel='stylesheet')
     link(href='https://getbootstrap.com/assets/css/docs.min.css', rel='stylesheet')
     link(href='stylesheets/dragula.min.css', rel='stylesheet', type='text/css')
     link(href='stylesheets/xeditable.css', rel='stylesheet')
@@ -28,25 +30,33 @@ html(lang='en', ng-app='scrum')
       menu-slide
       .container
         columnas.row.inline(dragula='"column-bag"', dragula-model='dashboard.kanban.columns')
-        form.container#form(flip-form="invisible")
-          div.form-group
-            label(for="exampleInputEmail1") Email address
-            input.form-control(type="email" ,placeholder="Email")
-          div.form-group
-            label(for="exampleInputPassword1") Password
-            input.form-control(type="password", placeholder="Password")
-          div.form-group
-            label(for="exampleInputFile") File input
-            input( type="file", id="exampleInputFile")
-            p.help-block Example block-level help text here.
-          div.checkbox
-            label
-              input(type="checkbox")
-          button.btn.btn-default( type="submit") Submit
+        #form(flip-form="invisible")
+          .container-fluid
+            .col-sm-9
+              .panel-body.col-md-8.col-md-offset-2
+                form.form-horizontal
+                  .form-group
+                    label.col-sm-2.control-label(for='inputEmail3') Email
+                    .col-sm-10
+                      input#inputEmail3.form-control(type='email', placeholder='Email')
+                  .form-group
+                    label.col-sm-2.control-label(for='inputPassword3') Password
+                    .col-sm-10
+                      input#inputPassword3.form-control(type='password', placeholder='Password')
+                  .form-group
+                    .col-sm-offset-2.col-sm-10
+                      .checkbox
+                        label
+                          input(type='checkbox')
+                          |  Remember me
+                  .form-group
+                    .col-sm-offset-2.col-sm-10
+                  button.btn.btn-default(type='submit') Sign in
+       
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js')
   script(type='text/javascript', src='javascripts/angular-dragula.min.js')
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-  script(src='https://getbootstrap.com/dist/js/bootstrap.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
   script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js')
   script(type='text/javascript', src='javascripts/app.js')
   script(src='javascripts/classie.js')
